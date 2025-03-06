@@ -7,7 +7,7 @@ function App() {
   const [health, setHealth] = useState('')
   console.log(health)
   useEffect( () => {
-    axios.get('http://127.0.0.1:3000/api/v1/health')
+    axios.get('https://test-app-ipnjc.ondigitalocean.app/backend/api/v1/health')
       .then(response => {
         setHealth(response.data);
       })
