@@ -7,7 +7,7 @@ function App() {
   const [health, setHealth] = useState('')
   console.log(health)
   useEffect( () => {
-    axios.get('https://test.techenv.dev/backend/api/v1/health')
+    axios.get('http://backend:2000/backend/api/v1/health')
       .then(response => {
         setHealth(response.data);
       })
@@ -19,7 +19,7 @@ function App() {
   return (
     <>
     <div className="">
-      <h3>{health.status}</h3>
+      <h3>{health?.status}</h3>
     </div>
     </>
   )
