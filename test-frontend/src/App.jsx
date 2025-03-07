@@ -7,7 +7,7 @@ function App() {
   const [health, setHealth] = useState('')
   console.log(health)
   useEffect( () => {
-    axios.get('http://backend:2000/api/v1/health')
+    axios.get('https://test.techenv.dev/backend/api/v1/health')
       .then(response => {
         setHealth(response.data);
       })
